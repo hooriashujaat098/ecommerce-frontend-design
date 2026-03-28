@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - E-commerce</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="cart.js" defer></script>
+</head>
+<body class="bg-gray">
+
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <a href="index.html" class="brand-logo">
+                <img src="../assets/assets/Layout/Brand/logo-colored.png" alt="Brand Logo" class="brand-logo-img">
+            </a>
+
+            <!-- Search Section -->
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search">
+                <div class="category-dropdown dropdown">
+                    <div class="dropdown-trigger">
+                        <span>All category</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="listing.html?category=automobiles">Automobiles</a></li>
+                        <li><a href="listing.html?category=clothes">Clothes and wear</a></li>
+                        <li><a href="listing.html?category=home">Home interiors</a></li>
+                        <li><a href="listing.html?category=electronics">Computer and tech</a></li>
+                        <li><a href="listing.html?category=tools">Tools, equipments</a></li>
+                        <li><a href="listing.html?category=sports">Sports and outdoor</a></li>
+                        <li><a href="listing.html?category=pets">Animal and pets</a></li>
+                        <li><a href="listing.html?category=machinery">Machinery tools</a></li>
+                    </ul>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+
+            <!-- Action Items Section -->
+            <div class="nav-actions">
+                <a href="#" class="action-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <span>Message</span>
+                </a>
+                <a href="listing.html" class="action-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="cart.html" class="action-item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>My cart</span>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <hr class="nav-divider">
+
+        <!-- Secondary Navbar (Sub-nav) -->
+        <div class="sub-nav-container">
+            <div class="sub-nav-left">
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger"><i class="fa-solid fa-bars" style="font-size: 16px; margin-right: 4px; color: #444;"></i> All category</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="listing.html?category=automobiles">Automobiles</a></li>
+                        <li><a href="listing.html?category=clothes">Clothes and wear</a></li>
+                        <li><a href="listing.html?category=home">Home interiors</a></li>
+                        <li><a href="listing.html?category=electronics">Computer and tech</a></li>
+                        <li><a href="listing.html?category=tools">Tools, equipments</a></li>
+                        <li><a href="listing.html?category=sports">Sports and outdoor</a></li>
+                        <li><a href="listing.html?category=pets">Animal and pets</a></li>
+                        <li><a href="listing.html?category=machinery">Machinery tools</a></li>
+                    </ul>
+                </div>
+                <a href="listing.html" class="sub-nav-item">Hot offers</a>
+                <a href="listing.html" class="sub-nav-item">Gift boxes</a>
+                <a href="listing.html" class="sub-nav-item">Projects</a>
+                <a href="listing.html" class="sub-nav-item">Menu item</a>
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">Help <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu align-right">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-nav-right">
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">English, USD <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu align-right">
+                        <li><a href="#">UAE, Arabic Emirates (shopname.ae)</a></li>
+                        <li><a href="#">Australia, Australia (shopname.ae)</a></li>
+                        <li><a href="#">US, United States (shopname.ae)</a></li>
+                        <li><a href="#">RU, Russia (shopname.ru)</a></li>
+                        <li><a href="#">IT, Italy (shopname.it)</a></li>
+                        <li><a href="#">DK, Denmark (denmark.com.dk)</a></li>
+                        <li><a href="#">FR, France (shopname.com.fr)</a></li>
+                        <li><a href="#">CN, China (shopname.ae)</a></li>
+                        <li><a href="#">GB, Great Britain (shopname.co.uk)</a></li>
+                    </ul>
+                </div>
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">Ship to <img src="../assets/assets/Layout1/Image/flags/US@2x.png" alt="US" class="flag-icon-img"> <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu align-right">
+                        <li><a href="#">🇦🇪 UAE</a></li>
+                        <li><a href="#">🇦🇺 Australia</a></li>
+                        <li><a href="#">🇺🇸 US</a></li>
+                        <li><a href="#">🇷🇺 RU</a></li>
+                        <li><a href="#">🇮🇹 IT</a></li>
+                        <li><a href="#">🇩🇰 DK</a></li>
+                        <li><a href="#">🇫🇷 FR</a></li>
+                        <li><a href="#">🇨🇳 CN</a></li>
+                        <li><a href="#">🇬🇧 GB</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <!-- Mobile search actions omitted for brevity, same as index.html -->
+        </div>
+    </header>
+
+    <!-- Main Cart Content -->
+    <main class="cart-page-content">
+        <div class="cart-container">
+            <h1 class="cart-page-title" id="cart-title">My cart (0)</h1>
+            
+            <div class="cart-grid-layout">
+                <!-- Left Column -->
+                <div class="cart-left-col">
+                    <div class="cart-items-card" id="cart-items-container">
+                        <!-- Dynamic items will be injected here -->
+                        <div class="p-4 text-center">Your cart is empty.</div>
+                        
+                        <div class="cart-bottom-actions">
+                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Back to shop</a>
+                            <button class="btn btn-outline-primary btn-border-gray text-primary" onclick="clearCart()">Remove all</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-features-row">
+                        <div class="c-feature">
+                            <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+                            <div class="feature-text"><strong>Secure payment</strong><p>Have you ever finally just</p></div>
+                        </div>
+                        <div class="c-feature">
+                            <div class="feature-icon"><i class="fa-solid fa-message"></i></div>
+                            <div class="feature-text"><strong>Customer support</strong><p>Have you ever finally just</p></div>
+                        </div>
+                        <div class="c-feature">
+                            <div class="feature-icon"><i class="fa-solid fa-truck"></i></div>
+                            <div class="feature-text"><strong>Free delivery</strong><p>Have you ever finally just</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="cart-right-col">
+                    <div class="coupon-card">
+                        <h4>Have a coupon?</h4>
+                        <div class="coupon-input-group">
+                            <input type="text" placeholder="Add coupon">
+                            <button class="btn btn-outline-primary apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="summary-row">
+                            <span class="s-label">Subtotal:</span>
+                            <span class="s-value" id="cart-subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="s-label">Discount:</span>
+                            <span class="s-value text-danger" id="cart-discount">- $0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="s-label">Tax:</span>
+                            <span class="s-value text-success" id="cart-tax">+ $0.00</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-total-row">
+                            <span class="total-label">Total:</span>
+                            <span class="total-value" id="cart-total">$0.00</span>
+                        </div>
+                        <button class="btn btn-success w-100 btn-checkout">Checkout</button>
+                        <div class="payment-methods text-center mt-3" style="font-size: 24px; gap: 10px; display: flex; justify-content: center;">
+                            <i class="fa-brands fa-cc-visa" style="color: #114098;"></i>
+                            <i class="fa-brands fa-cc-mastercard" style="color: #EB001B;"></i>
+                            <i class="fa-brands fa-cc-paypal" style="color: #003087;"></i>
+                            <i class="fa-brands fa-cc-amex" style="color: #007bc1;"></i>
+                            <i class="fa-brands fa-cc-apple-pay" style="color: #000;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <!-- Footer content consistent with index.html -->
+             <div class="footer-brand">
+                <a href="index.html" class="brand-logo mb-3">
+                    <img src="../assets/assets/Layout/Brand/logo-colored.png" alt="Brand Logo" class="brand-logo-img">
+                </a>
+                <p>Best information about the company goes here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>About</h4>
+                    <ul><li><a href="#">About Us</a></li><li><a href="#">Find store</a></li></ul>
+                </div>
+                <div class="link-column">
+                    <h4>Information</h4>
+                    <ul><li><a href="#">Help Center</a></li><li><a href="#">Shipping</a></li></ul>
+                </div>
+                <div class="link-column">
+                    <h4>For users</h4>
+                    <ul><li><a href="#">Login</a></li><li><a href="#">Register</a></li></ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // UI logic for cart rendering
+        function renderCartPage() {
+            const container = document.getElementById('cart-items-container');
+            const cart = JSON.parse(localStorage.getItem('ecommerce_cart') || '[]');
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="p-4 text-center">Your cart is empty.</div>
+                    <div class="cart-bottom-actions">
+                        <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Back to shop</a>
+                    </div>
+                `;
+                updateSummary(0);
+                document.getElementById('cart-title').textContent = `My cart (0)`;
+                return;
+            }
+
+            let html = '';
+            let subtotal = 0;
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-img">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="cart-item-info">
+                            <div class="item-title-row">
+                                <h3 class="item-title">${item.name}</h3>
+                                <span class="item-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                            </div>
+                            <div class="item-specs">Unit Price: $${item.price.toFixed(2)}</div>
+                            <div class="item-actions-row">
+                                <div class="item-btn-group">
+                                    <button class="btn btn-outline-danger btn-sm" onclick="removeFromCart('${item.id}'); renderCartPage();">Remove</button>
+                                </div>
+                                <div class="qty-controls">
+                                    <button class="qty-btn" onclick="updateQuantity('${item.id}', -1); renderCartPage();">-</button>
+                                    <span class="qty-val">${item.quantity}</span>
+                                    <button class="qty-btn" onclick="updateQuantity('${item.id}', 1); renderCartPage();">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                <div class="cart-bottom-actions">
+                    <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Back to shop</a>
+                    <button class="btn btn-outline-primary btn-border-gray text-primary" onclick="clearCart(); renderCartPage();">Remove all</button>
+                </div>
+            `;
+            container.innerHTML = html;
+            updateSummary(subtotal);
+            document.getElementById('cart-title').textContent = `My cart (${cart.reduce((a, b) => a + b.quantity, 0)})`;
+        }
+
+        function updateSummary(subtotal) {
+            const tax = subtotal * 0.05;
+            const total = subtotal + tax;
+            document.getElementById('cart-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('cart-tax').textContent = `+ $${tax.toFixed(2)}`;
+            document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('ecommerce_cart');
+            updateCartBadge();
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCartPage);
+
+        // Navbar dropdown logic
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('.dropdown-trigger');
+            if (trigger) {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('active'); });
+                    dropdown.classList.toggle('active');
+                });
+            }
+        });
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if(mobileToggle) mobileToggle.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+    </script>
+</body>
+</html>

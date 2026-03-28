@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Sub-Nav</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <a href="index.html" class="brand-logo">
+                <img src="../assets/assets/Layout/Brand/logo-colored.png" alt="Brand Logo" class="brand-logo-img">
+            </a>
+
+            <!-- Search Section -->
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search">
+                <div class="category-dropdown dropdown">
+                    <div class="dropdown-trigger">
+                        <span>All category</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="listing.html?category=automobiles">Automobiles</a></li>
+                        <li><a href="listing.html?category=clothes">Clothes and wear</a></li>
+                        <li><a href="listing.html?category=home">Home interiors</a></li>
+                        <li><a href="listing.html?category=electronics">Computer and tech</a></li>
+                        <li><a href="listing.html?category=tools">Tools, equipments</a></li>
+                        <li><a href="listing.html?category=sports">Sports and outdoor</a></li>
+                        <li><a href="listing.html?category=pets">Animal and pets</a></li>
+                        <li><a href="listing.html?category=machinery">Machinery tools</a></li>
+                    </ul>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+
+            <!-- Action Items Section -->
+            <div class="nav-actions">
+                <a href="#" class="action-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <span>Message</span>
+                </a>
+                <a href="listing.html" class="action-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="cart.html" class="action-item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>My cart</span>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <hr class="nav-divider">
+
+        <!-- Secondary Navbar (Sub-nav) -->
+        <div class="sub-nav-container">
+            <div class="sub-nav-left">
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger"><i class="fa-solid fa-bars" style="font-size: 16px; margin-right: 4px; color: #444;"></i> All category</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="listing.html?category=automobiles">Automobiles</a></li>
+                        <li><a href="listing.html?category=clothes">Clothes and wear</a></li>
+                        <li><a href="listing.html?category=home">Home interiors</a></li>
+                        <li><a href="listing.html?category=electronics">Computer and tech</a></li>
+                        <li><a href="listing.html?category=tools">Tools, equipments</a></li>
+                        <li><a href="listing.html?category=sports">Sports and outdoor</a></li>
+                        <li><a href="listing.html?category=pets">Animal and pets</a></li>
+                        <li><a href="listing.html?category=machinery">Machinery tools</a></li>
+                    </ul>
+                </div>
+                <a href="listing.html?tag=hot" class="sub-nav-item">Hot offers</a>
+                <a href="listing.html?tag=gift" class="sub-nav-item">Gift boxes</a>
+                <a href="listing.html?tag=projects" class="sub-nav-item">Projects</a>
+                <a href="listing.html" class="sub-nav-item">Menu item</a>
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">Help <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu align-right">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-nav-right">
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">English, USD <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu align-right">
+                        <li><a href="#">UAE, Arabic Emirates (shopname.ae)</a></li>
+                        <li><a href="#">Australia, Australia (shopname.ae)</a></li>
+                        <li><a href="#">US, United States (shopname.ae)</a></li>
+                        <li><a href="#">RU, Russia (shopname.ru)</a></li>
+                        <li><a href="#">IT, Italy (shopname.it)</a></li>
+                        <li><a href="#">DK, Denmark (denmark.com.dk)</a></li>
+                        <li><a href="#">FR, France (shopname.com.fr)</a></li>
+                        <li><a href="#">CN, China (shopname.ae)</a></li>
+                        <li><a href="#">GB, Great Britain (shopname.co.uk)</a></li>
+                    </ul>
+                </div>
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">Ship to <img src="../assets/assets/Layout1/Image/flags/US@2x.png" alt="US" class="flag-icon-img"> <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu align-right">
+                        <li><a href="#">🇦🇪 UAE</a></li>
+                        <li><a href="#">🇦🇺 Australia</a></li>
+                        <li><a href="#">🇺🇸 US</a></li>
+                        <li><a href="#">🇷🇺 RU</a></li>
+                        <li><a href="#">🇮🇹 IT</a></li>
+                        <li><a href="#">🇩🇰 DK</a></li>
+                        <li><a href="#">🇫🇷 FR</a></li>
+                        <li><a href="#">🇨🇳 CN</a></li>
+                        <li><a href="#">🇬🇧 GB</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="search-bar mobile-search">
+                <input type="text" class="search-input" placeholder="Search">
+                <div class="category-dropdown dropdown">
+                    <div class="dropdown-trigger">
+                        <span>All category</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="listing.html?category=automobiles">Automobiles</a></li>
+                        <li><a href="listing.html?category=clothes">Clothes and wear</a></li>
+                        <li><a href="listing.html?category=home">Home interiors</a></li>
+                        <li><a href="listing.html?category=electronics">Computer and tech</a></li>
+                        <li><a href="listing.html?category=tools">Tools, equipments</a></li>
+                        <li><a href="listing.html?category=sports">Sports and outdoor</a></li>
+                        <li><a href="listing.html?category=pets">Animal and pets</a></li>
+                        <li><a href="listing.html?category=machinery">Machinery tools</a></li>
+                    </ul>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="mobile-actions">
+                <a href="#" class="action-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <span>Message</span>
+                </a>
+                <a href="listing.html" class="action-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="cart.html" class="action-item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>My cart</span>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+
+            <hr class="nav-divider" style="margin: 15px 0;">
+            <div class="mobile-sub-nav">
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger"><i class="fa-solid fa-bars" style="color:#444;"></i> All category</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="listing.html?category=automobiles">Automobiles</a></li>
+                        <li><a href="listing.html?category=clothes">Clothes and wear</a></li>
+                        <li><a href="listing.html?category=home">Home interiors</a></li>
+                        <li><a href="listing.html?category=electronics">Computer and tech</a></li>
+                        <li><a href="listing.html?category=tools">Tools, equipments</a></li>
+                        <li><a href="listing.html?category=sports">Sports and outdoor</a></li>
+                        <li><a href="listing.html?category=pets">Animal and pets</a></li>
+                        <li><a href="listing.html?category=machinery">Machinery tools</a></li>
+                    </ul>
+                </div>
+                <a href="listing.html?tag=hot" class="sub-nav-item">Hot offers</a>
+                <a href="listing.html?tag=gift" class="sub-nav-item">Gift boxes</a>
+                <a href="listing.html?tag=projects" class="sub-nav-item">Projects</a>
+                <a href="listing.html" class="sub-nav-item">Menu item</a>
+            </div>
+            
+            <hr class="nav-divider" style="margin: 15px 0;">
+            <div class="mobile-sub-nav">
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">English, USD <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">UAE, Arabic Emirates (shopname.ae)</a></li>
+                        <li><a href="#">Australia, Australia (shopname.ae)</a></li>
+                        <li><a href="#">US, United States (shopname.ae)</a></li>
+                    </ul>
+                </div>
+                <div class="sub-nav-item dropdown">
+                    <span class="dropdown-trigger">Ship to <img src="../assets/assets/Layout1/Image/flags/US@2x.png" alt="US" class="flag-icon-img"> <i class="fa-solid fa-chevron-down"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">🇦🇪 UAE</a></li>
+                        <li><a href="#">🇦🇺 Australia</a></li>
+                        <li><a href="#">🇺🇸 US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-container">
+                <!-- Sidebar Menu (Left) -->
+                <aside class="hero-sidebar">
+                    <ul class="hero-menu">
+                        <li class="active"><a href="listing.html?category=automobiles">Automobiles</a></li>
+                        <li><a href="listing.html?category=clothing">Clothes and wear</a></li>
+                        <li><a href="listing.html?category=home">Home interiors</a></li>
+                        <li><a href="listing.html?category=tech">Computer and tech</a></li>
+                        <li><a href="listing.html?category=tools">Tools, equipments</a></li>
+                        <li><a href="listing.html?category=sports">Sports and outdoor</a></li>
+                        <li><a href="listing.html?category=pets">Animal and pets</a></li>
+                        <li><a href="listing.html?category=machinery">Machinery tools</a></li>
+                        <li><a href="listing.html?category=more">More category</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main Banner (Center) -->
+                <div class="hero-banner">
+                    <div class="banner-content">
+                        <p class="banner-subtitle">Latest trending</p>
+                        <h2 class="banner-title">Electronic items</h2>
+                        <a href="listing.html" class="btn-learn-more">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar (User, Offers) -->
+                <aside class="hero-right">
+                    <div class="widget user-widget">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="user-text">
+                                <p>Hi, user</p>
+                                <p>let's get started</p>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <a href="#" class="btn btn-primary">Join now</a>
+                            <a href="#" class="btn btn-secondary">Log in</a>
+                        </div>
+                    </div>
+                    <div class="widget offer-widget orange-bg">
+                        <p>Get US $10 off<br>with a new<br>supplier</p>
+                    </div>
+                    <div class="widget offer-widget teal-bg">
+                        <p>Send quotes with<br>supplier<br>preferences</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Deals and Offers -->
+        <section class="deals-section">
+            <div class="deals-container">
+                <div class="deals-header">
+                    <h3>Deals and offers</h3>
+                    <p>Hygiene equipments</p>
+                    <div class="countdown">
+                        <div class="time-box"><span class="val" id="deals-days">04</span><span class="lbl">Days</span></div>
+                        <div class="time-box"><span class="val" id="deals-hours">13</span><span class="lbl">Hour</span></div>
+                        <div class="time-box"><span class="val" id="deals-minutes">34</span><span class="lbl">Min</span></div>
+                        <div class="time-box"><span class="val" id="deals-seconds">56</span><span class="lbl">Sec</span></div>
+                    </div>
+                </div>
+                <div class="deals-items">
+                    <div class="deal-item">
+                        <img src="../assets/assets/Image/tech/8.png" alt="Smart watches">
+                        <p>Smart watches</p>
+                        <span class="discount">-25%</span>
+                    </div>
+                    <div class="deal-item">
+                        <img src="../assets/assets/Image/tech/image 23.png" alt="Laptops">
+                        <p>Laptops</p>
+                        <span class="discount">-15%</span>
+                    </div>
+                    <div class="deal-item">
+                        <img src="../assets/assets/Image/tech/image 29.png" alt="GoPro cameras">
+                        <p>GoPro cameras</p>
+                        <span class="discount">-40%</span>
+                    </div>
+                    <div class="deal-item">
+                        <img src="../assets/assets/Image/tech/image 32.png" alt="Headphones">
+                        <p>Headphones</p>
+                        <span class="discount">-25%</span>
+                    </div>
+                    <div class="deal-item">
+                        <img src="../assets/assets/Image/tech/image 33.png" alt="Canon cameras">
+                        <p>Canon cameras</p>
+                        <span class="discount">-25%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home and Outdoor Section -->
+        <section class="category-section">
+            <div class="category-container">
+                <div class="category-banner banner-home">
+                    <h3>Home and outdoor</h3>
+                    <a href="listing.html?category=home" class="btn-source">Source now</a>
+                </div>
+                <div class="category-grid">
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Soft chairs</h4><p>From<br>USD 19</p></div>
+                        <img src="../assets/assets/Image/interior/1.png" alt="Product">
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Sofa & chair</h4><p>From<br>USD 19</p></div>
+                        <img src="../assets/assets/Image/interior/3.png" alt="Product">
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Kitchen dishes</h4><p>From<br>USD 19</p></div>
+                        <img src="../assets/assets/Image/interior/6.png" alt="Product">
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Smart watches</h4><p>From<br>USD 19</p></div>
+                        <img src="../assets/assets/Image/interior/7.png" alt="Product">
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Kitchen mixer</h4><p>From<br>USD 100</p></div>
+                        <img src="../assets/assets/Image/interior/8.png" alt="Product">
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Blenders</h4><p>From<br>USD 39</p></div>
+                        <img src="../assets/assets/Image/interior/9.png" alt="Product">
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Home appliance</h4><p>From<br>USD 19</p></div>
+                        <img src="../assets/assets/Image/interior/image 89.png" alt="Product">
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-text"><h4>Coffee maker</h4><p>From<br>USD 10</p></div>
+                        <img src="../assets/assets/Image/interior/image 93.png" alt="Product">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consumer Electronics Section -->
+        <section class="category-section">
+            <div class="category-container">
+                <div class="category-banner banner-electronics">
+                    <h3>Consumer electronics and gadgets</h3>
+                    <a href="listing.html?category=tech" class="btn-source">Source now</a>
+                </div>
+                <div class="category-grid">
+                    <div class="grid-item" data-id="el1">
+                        <div class="grid-text"><h4>Smart watches</h4><p>From<br>USD 19</p></div>
+                        <img src="../assets/assets/Image/tech/6.png" alt="Product">
+                    </div>
+                    <div class="grid-item" data-id="el2">
+                        <div class="grid-text"><h4>Cameras</h4><p>From<br>USD 89</p></div>
+                        <img src="../assets/assets/Image/tech/8.png" alt="Product">
+                    </div>
+                    <div class="grid-item" data-id="el3">
+                        <div class="grid-text"><h4>Headphones</h4><p>From<br>USD 10</p></div>
+                        <img src="../assets/assets/Image/tech/image 23.png" alt="Product">
+                    </div>
+                    <div class="grid-item" data-id="el4">
+                        <div class="grid-text"><h4>Smart watches</h4><p>From<br>USD 90</p></div>
+                        <img src="../assets/assets/Image/tech/image 29.png" alt="Product">
+                    </div>
+                    <div class="grid-item" data-id="el5">
+                        <div class="grid-text"><h4>Gaming set</h4><p>From<br>USD 35</p></div>
+                        <img src="../assets/assets/Image/tech/image 32.png" alt="Product">
+                    </div>
+                    <div class="grid-item" data-id="el6">
+                        <div class="grid-text"><h4>Laptops & PC</h4><p>From<br>USD 340</p></div>
+                        <img src="../assets/assets/Image/tech/image 33.png" alt="Product">
+                    </div>
+                    <div class="grid-item" data-id="el7">
+                        <div class="grid-text"><h4>Smartphones</h4><p>From<br>USD 19</p></div>
+                        <img src="../assets/assets/Image/tech/image 34.png" alt="Product">
+                    </div>
+                    <div class="grid-item" data-id="el8">
+                        <div class="grid-text"><h4>Electric kattle</h4><p>From<br>USD 240</p></div>
+                        <img src="../assets/assets/Image/tech/image 85.png" alt="Product">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiry Section -->
+        <section class="inquiry-section">
+            <div class="inquiry-container">
+                <div class="inquiry-text">
+                    <h2>An easy way to send requests to all suppliers</h2>
+                    <p>Get quotes with supplier preferences</p>
+                </div>
+                <div class="inquiry-form-card">
+                    <h3>Send quote to suppliers</h3>
+                    <form action="#">
+                        <input type="text" placeholder="What item you need" class="form-control mb-3">
+                        <textarea placeholder="Type more details" class="form-control mb-3" rows="3"></textarea>
+                        <div class="form-row">
+                            <input type="text" placeholder="Quantity" class="form-control half-width">
+                            <select class="form-control half-width"><option>Pcs</option></select>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Send inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Items -->
+        <section class="recommended-section" id="recommended">
+            <h3 class="section-title">Recommended items</h3>
+            <div class="recommended-grid">
+                <div class="rec-item" data-id="rec1">
+                    <img src="../assets/assets/Layout/alibaba/Image/cloth/image 30.png" alt="T-shirts">
+                    <div class="rec-info">
+                        <span class="price">$10.30</span>
+                        <p class="desc">T-shirts with multiple colors, for men</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec1', name: 'T-shirt', price: 10.30, image: '../assets/assets/Layout/alibaba/Image/cloth/image 30.png'})">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="rec-item" data-id="rec2">
+                    <img src="../assets/assets/Layout/alibaba/Image/cloth/Bitmap.png" alt="Jeans shorts">
+                    <div class="rec-info">
+                        <span class="price">$10.30</span>
+                        <p class="desc">Jeans shorts for men blue color</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec2', name: 'Jeans shorts', price: 10.30, image: '../assets/assets/Layout/alibaba/Image/cloth/Bitmap.png'})">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="rec-item" data-id="rec3">
+                    <img src="../assets/assets/Layout/alibaba/Image/cloth/Bitmap (2).png" alt="Winter coat">
+                    <div class="rec-info">
+                        <span class="price">$12.50</span>
+                        <p class="desc">Brown winter coat medium size</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec3', name: 'Winter coat', price: 12.50, image: '../assets/assets/Layout/alibaba/Image/cloth/Bitmap (2).png'})">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="rec-item" data-id="rec5">
+                    <img src="../assets/assets/Layout/alibaba/Image/cloth/image 26.png" alt="Wallet">
+                    <div class="rec-info">
+                        <span class="price">$34.00</span>
+                        <p class="desc">Jeans bag for travel for men</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec5', name: 'Jeans bag', price: 34.00, image: '../assets/assets/Layout/alibaba/Image/cloth/image 26.png'})">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="rec-item" data-id="rec4">
+                    <img src="../assets/assets/Layout/alibaba/Image/cloth/image 24.png" alt="Backpack">
+                    <div class="rec-info">
+                        <span class="price">$99.00</span>
+                        <p class="desc">Leather wallet</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec4', name: 'Leather wallet', price: 99.00, image: '../assets/assets/Layout/alibaba/Image/cloth/image 24.png'})">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="rec-item" data-id="rec6">
+                    <img src="../assets/assets/Layout/alibaba/Image/cloth/2 1.png" alt="Canon camera">
+                    <div class="rec-info">
+                        <span class="price">$9.99</span>
+                        <p class="desc">Canon camera black, 100x zoom</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec6', name: 'Canon camera', price: 9.99, image: '../assets/assets/Layout/alibaba/Image/cloth/2 1.png'})">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="rec-item" data-id="rec7">
+                    <img src="../assets/assets/Image/tech/image 23.png" alt="Headset">
+                    <div class="rec-info">
+                        <span class="price">$8.99</span>
+                        <p class="desc">Headset for gaming with mic</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec7', name: 'Headset', price: 8.99, image: '../assets/assets/Image/tech/image 23.png'})">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="rec-item" data-id="rec8">
+                    <img src="../assets/assets/Layout/alibaba/Image/cloth/2 1.png" alt="Smartwatch">
+                    <div class="rec-info">
+                        <span class="price">$10.30</span>
+                        <p class="desc">Smartwatch silver color modern</p>
+                        <button class="btn-add-cart" onclick="addToCart({id: 'rec8', name: 'Smartwatch', price: 10.30, image: '../assets/assets/Layout/alibaba/Image/cloth/2 1.png'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h3>Subscribe on our newsletter</h3>
+                <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+                <form class="newsletter-form">
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="brand-logo mb-3">
+                    <img src="../assets/assets/Layout/Brand/logo-colored.png" alt="Brand Logo" class="brand-logo-img">
+                </a>
+                <p>Best information about the company goes here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Partnership</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Money Refund</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>For users</h4>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="listing.html">My Orders</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-apps">
+                <h4>Get app</h4>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">
+                        <i class="fa-brands fa-apple"></i>
+                        <div class="app-btn-text"><span>Download on the</span><strong>App Store</strong></div>
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div class="app-btn-text"><span>GET IT ON</span><strong>Google Play</strong></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p>© 2023 Ecommerce.</p>
+                <div class="language-selector dropdown">
+                    <div class="dropdown-trigger">
+                        <img src="../assets/assets/Layout1/Image/flags/US@2x.png" alt="EN" class="flag-icon-img">
+                        <span>English</span>
+                        <i class="fa-solid fa-chevron-up ml-2"></i>
+                    </div>
+                    <ul class="dropdown-menu align-right bottom-up">
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">Español</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Dropdown toggle logic
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('.dropdown-trigger');
+            if (trigger) {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('active'); });
+                    dropdown.classList.toggle('active');
+                });
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                dropdowns.forEach(d => d.classList.remove('active'));
+            }
+        });
+
+        // Deals & Offers Countdown
+        function initTimer() {
+            let totalSeconds = (4 * 24 * 3600) + (13 * 3600) + (34 * 60) + 56;
+            const daysEl = document.getElementById('deals-days');
+            const hoursEl = document.getElementById('deals-hours');
+            const minutesEl = document.getElementById('deals-minutes');
+            const secondsEl = document.getElementById('deals-seconds');
+            if(!daysEl) return;
+            setInterval(() => {
+                if (totalSeconds <= 0) return;
+                totalSeconds--;
+                daysEl.textContent = String(Math.floor(totalSeconds / (24 * 3600))).padStart(2, '0');
+                hoursEl.textContent = String(Math.floor((totalSeconds % (24 * 3600)) / 3600)).padStart(2, '0');
+                minutesEl.textContent = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+                secondsEl.textContent = String(Math.floor(totalSeconds % 60)).padStart(2, '0');
+            }, 1000);
+        }
+        initTimer();
+
+        // Product Cards Navigation (excluding buttons)
+        document.querySelectorAll('.deal-item, .grid-item, .rec-item').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                if(!e.target.closest('.btn-heart') && !e.target.closest('.btn-add-cart')) {
+                    const id = card.getAttribute('data-id') || 'prd1';
+                    window.location.href = `product.html?id=${id}`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
